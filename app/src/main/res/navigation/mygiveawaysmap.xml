@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mygiveawaysmap"
+    app:startDestination="@id/giveawaysFragment">
+
+
+    <fragment
+        android:id="@+id/giveawaysFragment"
+        tools:layout="@layout/fragment_giveaways"
+        android:name="com.example.gamegiveawayapp.views.GiveawaysFragment"
+        android:label="All Giveaways">
+
+        <action
+            android:id="@+id/action_giveawaysFragment_to_ps4GiveawaysFragment"
+            app:destination="@id/ps4GiveawaysFragment" />
+        <action
+            android:id="@+id/action_giveawaysFragment_to_pcGiveawaysFragment"
+            app:destination="@id/pcGiveawaysFragment" />
+        <action
+            android:id="@+id/action_giveawaysFragment_to_giveAwayItemFragment"
+            app:destination="@id/giveAwayItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pcGiveawaysFragment"
+        tools:layout="@layout/fragment_p_c_giveaways"
+        android:name="com.example.gamegiveawayapp.views.PCGiveawaysFragment"
+        android:label="PC Giveaways">
+
+        <action
+            android:id="@+id/action_pcGiveawaysFragment_to_giveAwayItemFragment"
+            app:destination="@id/giveAwayItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ps4GiveawaysFragment"
+        tools:layout="@layout/fragment_p_s4_giveaways"
+        android:name="com.example.gamegiveawayapp.views.PS4GiveawaysFragment"
+        android:label="PS4 Giveaways">
+
+        <action
+            android:id="@+id/action_ps4GiveawaysFragment_to_giveAwayItemFragment"
+            app:destination="@id/giveAwayItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/giveAwayItemFragment"
+        tools:layout="@layout/fragment_giveaways_details"
+        android:name="com.example.gamegiveawayapp.views.GiveawaysDetailsFragment"
+        android:label="Details">
+
+    </fragment>
+
+</navigation>
